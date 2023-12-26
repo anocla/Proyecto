@@ -1,0 +1,318 @@
+/* DESCRIPCIÓN: Este archivo contiene el CSS de todas las páginas organizado por segmentos.
+Cada segmento está estrucutrado de la siguiente manera /*---- SEGMENTO ----*/
+
+/* Segmentos que incluye:
+* Reset
+* Header
+* Work
+* Contact
+* Footer
+*/
+
+
+/* Normalizar / Reset */
+
+*{
+    margin:0;
+    padding: 0;
+    border:0;
+    box-sizing: border-box;
+}
+
+/* Quitamos los puntos de los <li> */
+li{
+    list-style: none;
+}
+
+/* Configuramos anclas suaves */
+html{
+    scroll-behavior: smooth;
+}
+
+/* Desactivamos estilos por defecto de las principales etiquetas de texto */
+h1 , h2 , h3 , h4 , h5 , h6 , p , strong , a , span, i , b , u , em{
+    font-weight: inherit;
+    font-size: inherit;
+    font-style: normal;
+    text-decoration: none;
+}
+
+/* Evitamos problemas con las imagenes */
+img , svg , picture , video , iframe , figure{
+    display: block;
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Nivelamos problemas de tipografías, svg y colocación de formularios */
+form , input , button , textarea , select, option , label{
+    font-size: inherit;
+    font-family: inherit;
+    background-color: transparent;
+}
+
+/* Reseteamos los enlaces para funcionar como cajas... */
+a{
+    display: block;
+    color:inherit;
+    text-decoration: none;
+    font-size: inherit;
+}
+
+/* Configuramos toda la tipoagrafía de la web */
+body{
+    font-family: 'Futura Std', sans-serif;
+    font-size: .7rem;
+    letter-spacing: .1rem;
+    color: white;
+    background-color: black;
+}
+body::-webkit-scrollbar{
+    width: .75rem;
+}
+body::-webkit-scrollbar-track{
+    background-color: rgb(231, 133, 196);
+}
+body::-webkit-scrollbar-thumb{
+    background-color: rgb(205, 48, 150);
+    border-radius: 6px;
+}
+.header{
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0rem 4rem 0 0;
+    padding-left: 2rem;
+    padding-top: .5rem;
+}
+
+.header__img{
+    width: 5rem;
+}
+.header__ul{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    text-transform: uppercase;
+}
+.hero{
+    width: 100%;
+    height: 100vh;
+}
+.hero__video{
+    height: 100vh;
+    position: absolute;
+    top:12%;
+    left: 0;
+}
+.hero__section{
+    font-family: 'Harmond', sans-serif;
+    
+}
+.section__h1{
+    font-size: 7rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    padding-top: 11rem;
+    overflow: hidden;    
+}
+.h1__span{
+    display: inline-block;
+    transform-origin: bottom right;
+    animation: letter 1.5s ease 1 both;
+}
+
+.h1__span:nth-child(1){animation-delay: .1s;}
+.h1__span:nth-child(2){animation-delay: .5s;}
+.h1__span:nth-child(3){animation-delay: .9s;}
+.h1__span:nth-child(4){animation-delay: 1.3s;}
+.h1__span:nth-child(5){animation-delay: 1.7s;}
+.h1__span:nth-child(6){animation-delay: 2.1s;}
+
+.section__h2{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2rem;
+
+    font-size: 2.5rem;
+    overflow: hidden;
+}
+.develop{
+    margin-left: 20rem;
+}
+.h2__span{
+    transform-origin: bottom right;
+    animation: letter 1.5s ease 1 both;
+}
+.h2__span:nth-child(1){animation-delay: .1s;}
+.h2__span:nth-child(2){animation-delay: .5s;}
+.h2__span:nth-child(3){animation-delay: .9s;}
+.h2__span:nth-child(4){animation-delay: 1.3s;}
+.h2__span:nth-child(5){animation-delay: 1.7s;}
+.h2__span:nth-child(6){animation-delay: 2.1s;}
+.h2__span:nth-child(7){animation-delay: 2.6s;}
+.h2__span:nth-child(8){animation-delay: 3.1s;}
+
+@keyframes letter {
+    from{ transform: translateY(100%) rotateY(5deg);}
+    to{ transform: translateY(0%) rotateY(0%);}
+    
+}
+.button__hero{
+    background-color: white;
+    padding: 1rem 2rem 1rem 3rem;
+    border-radius: 2rem ;
+    color: black;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    box-shadow: 0 .3rem .3rem rgba(232, 226, 226, 0.392);
+
+    position: absolute;
+    top: 90%;
+    right: 5%;
+    overflow: hidden;
+}
+.button__hero::before{
+    content: '';
+    display: block;
+
+    width: .5rem;
+    height: .5rem;
+    background-color: black;
+
+    border-radius: 50%;
+
+    position: absolute;
+    top: calc( 50% - .25rem);
+    left: 12%;
+
+    transition: all 1.5s ease;
+}
+.button__span{
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+    transition: all 1s ease;
+}
+.button__svg{
+    width: 1rem;
+    height: 1rem;
+    color: white;
+
+    position: absolute;
+    top: calc( 50% - .5rem);
+    right: 10%;
+
+    opacity: 0;
+    transition: all .5s ease;
+}
+
+.button__hero:hover .button__span{
+    color: white;
+    transform: translateX(-20%);
+}
+.button__hero:hover::before{
+    background-color: rgb(216, 112, 178);
+    transform: scale(50);
+}
+.button__hero:hover .button__svg{
+    opacity: 1;
+    transform: translateX(10%);
+}
+.work{
+    width: 100%;
+    min-height: 150vh;
+    background-color: pink;
+    background-image: url(../assets/background_white.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+}
+.work__img{
+    width: 400px;
+    min-height: 400px;
+    background-color: palevioletred;
+    border-radius: 20%;
+
+    opacity: 0.5;
+    transition: all 2s ease;
+}
+.work__img:hover{
+    opacity: 1;
+}
+
+.footer{
+    width: 100%;
+    background-color: black;
+    padding: 4rem;
+    color: white;
+    text-transform: uppercase;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__ul{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    padding-left: 2rem;
+    gap: 1rem;
+}
+.footer__svg{
+    width: 1rem;
+    height: 1rem;
+
+}
+@media (max-width:960px){
+    .section__h1{
+        font-size: 6rem;
+    }
+    .body{
+        font-size: .3rem;
+    }
+}
+@media (max-width:768px){
+
+    .section__h1{
+        font-size: 4.5rem;
+    }
+    .section__h2{
+        font-size: 2rem;
+    }
+    .develop{
+        margin-left: 10rem;
+    }
+    .button__hero{
+        padding: .5rem 1rem .5rem 1.5rem;
+    }
+
+}
+
+

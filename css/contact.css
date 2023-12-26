@@ -1,0 +1,209 @@
+/* Normalizar / Reset */
+*{
+    margin:0;
+    padding: 0;
+    border:0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+html{
+    
+    font-size: 100%;
+}
+h1 , h2 , h3 , h4 , h5 , h6 , p , strong{
+    font-weight: inherit;
+    font-size: inherit;
+    font-style: normal;
+}
+img , svg , picture, video {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+}
+form , input , button , textarea , select , option , label{
+    display: block;
+    font-size: inherit;
+    font-family: inherit;
+    background-color: transparent;
+}
+a{
+    color:inherit;
+    text-decoration: none;
+}
+body{
+    font-family: 'Futura Std', sans-serif;
+    font-size: .7rem;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+}
+body::-webkit-scrollbar{
+    width: .75rem;
+}
+body::-webkit-scrollbar-track{
+    background-color: rgb(242, 168, 216);
+}
+body::-webkit-scrollbar-thumb{
+    background-color: rgb(226, 100, 182);
+    border-radius: 6px;
+}
+.header{
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0rem 4rem 0 0;
+    padding-left: 2rem;
+    padding-top: .5rem;
+}
+.header__img{
+    width: 5rem;
+
+}
+.header__ul{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    color: white;
+}
+.hero{
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(../assets/fondo_luz.jpg);
+    background-repeat:repeat;
+    background-position: left;
+    background-size: cover;
+}
+.container__based{
+    width: 100%;
+    height: 40vh;
+    background-color: black;
+
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 3rem;
+
+    font-size: 1.5rem;
+    color: white;
+}
+.formulario{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 4rem;
+    gap: 4rem;
+}
+.formulario__form{
+    padding-left: 4rem;
+}
+.formulario__input{
+    padding: 1rem;
+    border: .0625rem solid black;
+    border-radius: .25rem .25rem;
+    margin-bottom: 1rem;
+}
+
+.formulario__textarea{
+    padding: 1rem;
+    margin: auto;
+    border-radius: .25rem .25rem;
+    border: 1px solid black;
+}
+.formulario__btn{
+    margin-top: 2rem;
+    background-color: transparent;
+    border: .125rem solid black;
+    border-radius: .25rem .25rem;
+    padding: 1rem;
+
+    transition: all 1s ease;
+}
+.formulario__btn:hover{
+    background-color: black;
+    color: white;
+}
+.button__hero{
+    background-color: white;
+    padding: 1rem 1.5rem 1rem 3rem;
+    border-radius: 2rem ;
+    color: black;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    box-shadow: 0 .3rem .3rem rgba(232, 226, 226, 0.392);
+
+    position: fixed;
+    bottom: 3%;
+    right: 5%;
+    overflow: hidden;
+}
+.button__hero::before{
+    content: '';
+    display: block;
+    width: .5rem;
+    height: .5rem;
+    background-color: black;
+
+    border-radius: 50%;
+
+    position: absolute;
+    top: calc( 50% - .25rem);
+    left: 16%;
+
+    transition: all 1.5s ease;
+}
+.button__span{
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+
+    transition: all 1s ease;
+}
+
+.button__hero:hover .button__span{
+    color: white;
+    transform: translateX(-20%);
+    padding-left: 1.5rem;
+}
+.button__hero:hover::before{
+    background-color: rgb(216, 112, 178);
+    transform: scale(50);
+}
+.footer{
+    width: 100%;
+    background-color: black;
+    padding: 4rem;
+    color: white;
+    text-transform: uppercase;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer__ul{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.footer__svg{
+    width: 1rem;
+    height: 1rem;
+}
