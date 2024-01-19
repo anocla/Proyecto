@@ -6,94 +6,103 @@
     <link href="https://fonts.cdnfonts.com/css/harmond-font-family" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/futura-std-4" rel="stylesheet">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.png">
     <title>Andrea</title>
 </head>
 <body>
-        <!-- Encabezado y menú de navegación -->
-        <header class="header">
-            <span class="header__span">
-                <a class="header__a" href="index.html" title="Go to home">
-                    <img class="header__img" src="assets/logo_ao.jpg" alt="Logo">
-                </a>
-            </span>
-            <nav class="header__nav">
-                <ul class="header__ul">
-                    <li class="header__li">
-                        <a class="header__a" href="about.html" title="Go to about">About</a>
-                    </li>
-                    <li class="header__li">
-                        <a class="header__a" href="contact.html" title="Go to contact">Contact</a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-        <!-- Contenido principal de la web -->
-        <main class="main">
-            <!-- Sección portada -->
-            <div class="hero">            
-                <section class="hero__section">
-                    <video muted autoplay loop playsinline preload="none" src="assets/istockphoto-1453036693-640_adpp_is.mp4" class="hero__video"></video>
-                    <h1 class="section__h1">
-                        <span class="h1__span">A</span><span class="h1__span">n</span><span class="h1__span">d</span><span class="h1__span">r</span><span class="h1__span">e</span><span class="h1__span">a</span>
-                    </h1>
-                    <h2 class="section__h2">
-                        <span class="h2__span">F</span><span class="h2__span">r</span><span class="h2__span">o</span><span class="h2__span">n</span><span class="h2__span">t</span><span class="h2__span">-</span><span class="h2__span">e</span><span class="h2__span">n</span><span class="h2__span">d</span>
-                    </h2>
-                    <h2 class="section__h2 develop">
-                        <span class="h2__span">D</span><span class="h2__span">e</span><span class="h2__span">v</span><span class="h2__span">e</span><span class="h2__span">l</span><span class="h2__span">o</span><span class="h2__span">p</span><span class="h2__span">e</span><span class="h2__span">r</span>
-                    </h2>
-                </section>
-                <!-- Botón portada para acceder a trabajos sin hacer scroll -->
-                <a class="button__hero" href="#scroll" title="See work">
-                    <span class="button__span">See Work</span>
-                    <svg class="button__svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
-                        <path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
-                    </svg>
-                </a>
-            </div>
-            <!-- Sección trabajos -->
-            <div id="scroll" class="work">
-                <!-- background image work -->
-                <a href="" class="work__a" title="Go to Lola Sampere">
-                    <img src="#" alt="Lola Sampere" class="work__img">
-                </a>
-            </div>
-        </main>
-        <!-- Pie de página -->
-        <footer class="footer">
-            <div class="footer__firma">
-                <h3>©2023 Andrea Ochoa</h3>
-                <span>creation</span>
-            </div>
-            <div class="footer__rrss">
-                <ul class="footer__ul">
-                    <li class="footer__li">
-                        <a href="" class="footer__a">
-                            <svg class="footer__svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"  viewBox="0 0 16 16">
-                                <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="footer__li">
-                        <a href="" class="footer__a">
-                            <svg class="footer__svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                                <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401m-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4"/>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="footer__li">
-                        <a href="" class="footer__a">
-                            <svg class="footer__svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
-                            </svg>
-                        </a>
-                </ul>
-            </div>
-            <div class="footer__contacto">
-                <span>andreaochoa1b@gmail.com</span>
-            </div>
-    
-        </footer>
+        <!-- Este archivo HTML incluye la parte principial del sitio WEB
+    Estructura general:
+    * Encabezado y menú de navegación
+    * Contenido principal
+        - Sección trabajo
+    * Pie de página
+-->
+    <!-- Encabezado y menú de navegación -->
+    <header class="header">
+        <span class="header__span">
+            <a class="header__a" href="index.html" title="Go to home">
+                <img class="header__img" src="assets/logo_ao.jpg" alt="Logo">
+            </a>
+        </span>
+        <nav class="header__nav">
+            <ul class="header__ul">
+                <li class="header__li">
+                    <a class="header__a" href="about.html" title="Go to about">About</a>
+                </li>
+                <li class="header__li">
+                    <a class="header__a" href="contact.html" title="Go to contact">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Contenido principal de la web -->
+    <main class="main">
+        <!-- Sección portada -->
+        <div class="hero">            
+            <section class="hero__section">
+                <video muted autoplay loop playsinline preload="none" src="assets/video_portada.mp4" class="hero__video"></video>
+                <h1 class="section__h1">
+                    <span class="h1__span">A</span><span class="h1__span">n</span><span class="h1__span">d</span><span class="h1__span">r</span><span class="h1__span">e</span><span class="h1__span">a</span>
+                </h1>
+                <h2 class="section__h2">
+                    <span class="h2__span">F</span><span class="h2__span">r</span><span class="h2__span">o</span><span class="h2__span">n</span><span class="h2__span">t</span><span class="h2__span">-</span><span class="h2__span">e</span><span class="h2__span">n</span><span class="h2__span">d</span>
+                </h2>
+                <h2 class="section__h2 develop">
+                    <span class="h2__span">D</span><span class="h2__span">e</span><span class="h2__span">v</span><span class="h2__span">e</span><span class="h2__span">l</span><span class="h2__span">o</span><span class="h2__span">p</span><span class="h2__span">e</span><span class="h2__span">r</span>
+                </h2>
+            </section>
+            <!-- Botón (ancla) portada para desplazarse a sección trabajo sin hacer scroll -->
+            <a class="button__hero" href="#scroll" title="See work">
+                <span class="button__span">See Work</span>
+                <svg class="button__svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                    <path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                </svg>
+            </a>
+        </div>
+        <!-- Sección trabajo 
+                Decripción: en esta sección tenemos los proyectos elaborados hasta el momento-->
+        <div  class="work">
+            <!-- background image work -->
+            <a id="scroll" href="lola_sampere/index.html" class="work__a" title="Go to Lols Sempere">
+                <img src="assets/lols_sempere.jpg" alt="Lola Sampere" class="work__img" loading="lazy">
+            </a>
+        </div>
+    </main>
+    <!-- Pie de página -->
+    <footer class="footer">
+        <div class="footer__firma">
+            <h3 class="footer__h3">©2023 Andrea Ochoa</h3>
+            <span class="footer__span">Creation</span>
+        </div>
+        <div class="footer__rrss">
+            <ul class="footer__ul">
+                <li class="footer__li">
+                    <a class="footer__a" href="mailto:fed@andreaochoalabrador.com" title="Go to email">
+                        <svg class="footer__svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"  viewBox="0 0 16 16">
+                            <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
+                        </svg>
+                    </a>
+                </li>
+                <li class="footer__li">
+                    <a class="footer__a" href="https://www.linkedin.com/in/andrea-o-61608024a/"  title="Linkedin" target="_blank" rel="noopener noreferrer">
+                        <svg class="footer__svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401m-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4"/>
+                        </svg>
+                    </a>
+                </li>
+                <li class="footer__li">
+                    <a class="footer__a" href="https://github.com/anocla"  title="Github" target="_blank" rel="noopener noreferrer">
+                        <svg class="footer__svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+                        </svg>
+                    </a>
+            </ul>
+        </div>
+        <div class="footer__contacto">
+            <span>fed@andreaochoalabrador.com</span>
+        </div>
+
+    </footer>
 </body>
 </html>

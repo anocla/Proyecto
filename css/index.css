@@ -1,16 +1,16 @@
-/* DESCRIPCIÓN: Este archivo contiene el CSS de todas las páginas organizado por segmentos.
+/* DESCRIPCIÓN: Este archivo contiene el CSS de toda la página principal organizado por segmentos.
 Cada segmento está estrucutrado de la siguiente manera /*---- SEGMENTO ----*/
 
 /* Segmentos que incluye:
 * Reset
 * Header
 * Work
-* Contact
 * Footer
+* Responsive / Breackpoints
+* @keyframes
 */
 
-
-/* Normalizar / Reset */
+/* NORMALIZAR / RESET */
 
 *{
     margin:0;
@@ -27,6 +27,7 @@ li{
 /* Configuramos anclas suaves */
 html{
     scroll-behavior: smooth;
+    font-size: 100%;
 }
 
 /* Desactivamos estilos por defecto de las principales etiquetas de texto */
@@ -46,6 +47,7 @@ img , svg , picture , video , iframe , figure{
 
 /* Nivelamos problemas de tipografías, svg y colocación de formularios */
 form , input , button , textarea , select, option , label{
+    display: block;
     font-size: inherit;
     font-family: inherit;
     background-color: transparent;
@@ -62,11 +64,13 @@ a{
 /* Configuramos toda la tipoagrafía de la web */
 body{
     font-family: 'Futura Std', sans-serif;
-    font-size: .7rem;
+    font-size: .9rem;
     letter-spacing: .1rem;
     color: white;
     background-color: black;
+    overflow-x: hidden;
 }
+/* Configuramos estilo scrollbar */
 body::-webkit-scrollbar{
     width: .75rem;
 }
@@ -77,6 +81,8 @@ body::-webkit-scrollbar-thumb{
     background-color: rgb(205, 48, 150);
     border-radius: 6px;
 }
+
+/*---- HEADER ----*/
 .header{
     width: 100%;
     background-color: black;
@@ -85,52 +91,76 @@ body::-webkit-scrollbar-thumb{
     justify-content: space-between;
     align-items: center;
 
-    padding: 0rem 4rem 0 0;
-    padding-left: 2rem;
-    padding-top: .5rem;
+    padding: 0rem 2rem 0 0;
+    padding-left: 1rem;
+    
+}
+.header__img{
+    width: 4rem;
+    animation: line 2s ease 1
 }
 
-.header__img{
-    width: 5rem;
-}
 .header__ul{
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
     gap: 2rem;
+    color: white;
     text-transform: uppercase;
+    
+    animation: line 2s ease 1;
 }
+.header__li::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: .05rem;
+    background-color: white;
+
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform .5s ease-out;
+}
+.header__li:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+/* SECCIÓN PORTADA */
 .hero{
     width: 100%;
-    height: 100vh;
-}
-.hero__video{
-    height: 100vh;
-    position: absolute;
-    top:12%;
-    left: 0;
-}
-.hero__section{
-    font-family: 'Harmond', sans-serif;
-    
-}
-.section__h1{
-    font-size: 7rem;
+    min-height: 100vh;
+
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
+}
+.hero__video{
+    width: 90%;
+    min-height: 100%;
 
-    padding-top: 11rem;
-    overflow: hidden;    
+    object-fit: cover;
+    position: absolute;
+    top: 5%;
+    left: 0;
+    z-index: -1;
+}
+.hero__section{
+    font-family: 'Harmond', sans-serif;
+}
+.section__h1{
+    font-size: 7rem;
+    overflow: hidden; 
+    padding: 0 0 0 3rem; 
 }
 .h1__span{
     display: inline-block;
     transform-origin: bottom right;
     animation: letter 1.5s ease 1 both;
 }
-
+/* Utilizamos pseudo-clase como nth-child combinados con animation 'letter' y @keyframe 
+    de manera que cada letra de h1__span aparezca en un momento determinado en la posición indicada*/
 .h1__span:nth-child(1){animation-delay: .1s;}
 .h1__span:nth-child(2){animation-delay: .5s;}
 .h1__span:nth-child(3){animation-delay: .9s;}
@@ -155,6 +185,10 @@ body::-webkit-scrollbar-thumb{
     transform-origin: bottom right;
     animation: letter 1.5s ease 1 both;
 }
+
+/* Utilizamos pseudo-clase como nth-child combinados con animation 'letter' y @keyframe 
+    de manera que, como en el caso anterior, cada letra de .h2__span aparezca en un momento determinado en la posición indicada*/
+
 .h2__span:nth-child(1){animation-delay: .1s;}
 .h2__span:nth-child(2){animation-delay: .5s;}
 .h2__span:nth-child(3){animation-delay: .9s;}
@@ -164,16 +198,12 @@ body::-webkit-scrollbar-thumb{
 .h2__span:nth-child(7){animation-delay: 2.6s;}
 .h2__span:nth-child(8){animation-delay: 3.1s;}
 
-@keyframes letter {
-    from{ transform: translateY(100%) rotateY(5deg);}
-    to{ transform: translateY(0%) rotateY(0%);}
-    
-}
 .button__hero{
     background-color: white;
     padding: 1rem 2rem 1rem 3rem;
     border-radius: 2rem ;
     color: black;
+    font-size: 0.7rem;
 
     display: flex;
     flex-flow: row nowrap;
@@ -188,6 +218,9 @@ body::-webkit-scrollbar-thumb{
     right: 5%;
     overflow: hidden;
 }
+/* Utilizamos el seudoelemento ::before para añadir contenido en este caso un punto
+delante de .button__hero  */
+
 .button__hero::before{
     content: '';
     display: block;
@@ -204,6 +237,7 @@ body::-webkit-scrollbar-thumb{
 
     transition: all 1.5s ease;
 }
+
 .button__span{
     text-transform: uppercase;
     position: relative;
@@ -222,6 +256,8 @@ body::-webkit-scrollbar-thumb{
     opacity: 0;
     transition: all .5s ease;
 }
+/* Utilizamos el seudoelemento :hover para que cuando el mouse se coloca encima de .button__hero,
+ .button__span realice la animacion según los valores indicados  */
 
 .button__hero:hover .button__span{
     color: white;
@@ -235,11 +271,12 @@ body::-webkit-scrollbar-thumb{
     opacity: 1;
     transform: translateX(10%);
 }
+/* Imagen de fondo seccion WORK */
 .work{
     width: 100%;
     min-height: 150vh;
     background-color: pink;
-    background-image: url(../assets/background_white.jpg);
+    background-image: url(../assets/work_background.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -252,13 +289,14 @@ body::-webkit-scrollbar-thumb{
 
 }
 .work__img{
-    width: 400px;
-    min-height: 400px;
+    width: 300px;
+    min-height: 300px;
     background-color: palevioletred;
     border-radius: 20%;
 
     opacity: 0.5;
     transition: all 2s ease;
+    object-fit: cover;
 }
 .work__img:hover{
     opacity: 1;
@@ -269,37 +307,46 @@ body::-webkit-scrollbar-thumb{
     background-color: black;
     padding: 4rem;
     color: white;
-    text-transform: uppercase;
 
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
 }
-
+.footer__firma{
+    text-transform: uppercase;
+}
 .footer__ul{
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
-    padding-left: 2rem;
     gap: 1rem;
 }
 .footer__svg{
-    width: 1rem;
-    height: 1rem;
-
+    width: 1.5rem;
+    height: 1.5rem;
 }
+
+/* RESPONSIVE - BREAKPOINTS */
+
 @media (max-width:960px){
     .section__h1{
         font-size: 6rem;
     }
-    .body{
-        font-size: .3rem;
-    }
 }
 @media (max-width:768px){
-
+    .hero__section{
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .hero__video{
+        width: 100%;
+        left: 0;
+        top: 7%;
+    }
     .section__h1{
         font-size: 4.5rem;
     }
@@ -309,10 +356,75 @@ body::-webkit-scrollbar-thumb{
     .develop{
         margin-left: 10rem;
     }
-    .button__hero{
-        padding: .5rem 1rem .5rem 1.5rem;
+
+    .footer{
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer__ul{
+        padding-left: 0;
+        padding-top: 2rem;
+        gap: .5rem;
+    }
+    .footer__span{
+        margin-left: 3rem;
+    }
+    .footer__contacto{
+        display: none;
     }
 
 }
 
-
+@media (max-width:480px){
+    .header__a{
+        padding: .8rem 0 0 0;
+    }
+    .header__img{
+        width: 3rem;
+    }
+    .hero{
+        min-height: 90vh;
+    }
+    .hero__video{
+        width: 100%;
+        top: 7%;
+        left: 0;
+    }
+    .section__h1{
+        font-size: 4rem;
+        padding: 0;
+    }
+    .section__h2{
+        font-size: 1.5rem;
+    }
+    .work{
+        min-height: 100vh;
+    }
+    .work__img{
+        width: 18.75rem;
+        min-height: 18.75rem;
+    }
+    .footer__ul{
+        gap: 1rem;
+    }
+    .footer__svg{
+        width: 2rem;
+        height: 2rem;
+    }
+}
+/* Establecemos @keyframe: secuencia de animación que 
+debe ser alcanzado por determinados puntos durante la animación según 
+las propiedades aplicadas anteriormente */
+@keyframes line{
+    0% {transform: translateX(100%);
+        opacity: 0;}
+    100% {transform: translateX(0%);
+        opacity: 1;}
+}
+@keyframes letter {
+    0%{ transform: translateY(100%) rotateY(5deg);}
+    100%{ transform: translateY(0) rotateY(0);}
+    
+}

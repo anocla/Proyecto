@@ -1,0 +1,335 @@
+/* DESCRIPCIÓN: Este archivo contiene el CSS de toda la sección about organizado por segmentos.
+Cada segmento está estrucutrado de la siguiente manera /*---- SEGMENTO ----*/
+
+/* Segmentos que incluye:
+* Reset
+* Header
+* Sobre mí
+* Contact
+* Footer
+* Responsive
+* @keyframes
+*/
+
+
+/* NORMALIZAR - RESET */
+
+*{
+    margin:0;
+    padding: 0;
+    border:0;
+    box-sizing: border-box;
+}
+
+/* Quitamos los puntos de los <li> */
+li{
+    list-style: none;
+}
+
+/* Configuramos anclas suaves */
+html{
+    scroll-behavior: smooth;
+}
+
+/* Desactivamos estilos por defecto de las principales etiquetas de texto */
+h1 , h2 , h3 , h4 , h5 , h6 , p , strong , a , span, i , b , u , em{
+    font-weight: inherit;
+    font-size: inherit;
+    font-style: normal;
+    text-decoration: none;
+}
+
+/* Evitamos problemas con las imagenes */
+img , svg , picture , video , iframe , figure{
+    display: block;
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Nivelamos problemas de tipografías, svg y colocación de formularios */
+form , input , button , textarea , select, option , label{
+    font-size: inherit;
+    font-family: inherit;
+    background-color: transparent;
+}
+
+/* Reseteamos los enlaces para funcionar como cajas... */
+a{
+    display: block;
+    color:inherit;
+    text-decoration: none;
+    font-size: inherit;
+}
+body{
+    font-family: 'Kaisei Opti', serif;
+}
+/* ENCABEZADO */
+.header{
+    width: 100%;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 3rem;
+}
+
+.header__img{
+    width: 20rem;
+}
+.header__btn{
+    display: none;
+}
+.header__svg{
+    width: 2rem;
+    height: 2rem;
+    color: rgb(229, 10, 10);
+}
+.header__ul{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 1rem;
+}
+.header__li:hover{
+    color: rgb(229, 10, 10);
+    cursor: pointer;
+}
+.marked{
+    color: rgb(229, 10, 10);
+}
+/* SECCIÓN SOBRE MÍ */
+.hero{
+    width: 100%;
+    min-height: 70vh;
+    /* background-color: gray; */
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.columns{
+    width: 80%;
+    max-width: 60rem;
+    /* background-color: aquamarine; */
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 1rem;
+    padding: 2rem 0 0 0;
+
+    border-top: .0625rem solid rgba(77, 72, 72, 0.537);
+}
+
+.column__imagen{
+    width: 50%;
+}
+.columna__descripcion{
+    width: 50%;
+}
+.columns__p{
+    font-size: 0.9rem;
+    padding: 0 0 2rem 2rem;
+}
+
+/* SECCIÓN CONTACTO */
+.contact__section{
+    width: 80%;
+    min-height: 50vh;
+
+    margin: 10vw auto;
+
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+
+    gap: 3rem;
+
+}
+.title{
+    font-size: 4rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color:  rgb(229, 10, 10);
+
+    transition: all .5s ease-in;
+}
+.title:hover{
+    transform: scale(1.5);
+    transition: transform .5s ease-in;
+    cursor: pointer;
+}
+.contact__a{
+    color: rgb(229, 10, 10);
+    font-weight: bold;
+
+    animation: aparecer 10s ease 1 both;
+}
+
+/* PIE DE PÁGINA */
+.footer{
+    width: 100%; 
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 5rem;
+}
+
+.footer__linktree{
+    transition: all 1s ease;
+}
+.footer__linktree::before{
+    content: '';
+    display: block;
+    width: 100%;
+    height: .05rem;
+    background-color: black;
+}
+.footer__linktree:hover::before{
+    content: '';
+    display: block;
+    width: 100%;
+    height: .05rem;
+    background-color: rgb(229, 10, 10);
+
+    transition: all 1s ease;
+}
+.footer__linktree::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: .05rem;
+    background-color: black;
+}
+.footer__linktree:hover::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: .05rem;
+    background-color: rgb(229, 10, 10);
+
+    transition: all 1s ease;
+}
+.footer__ul{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+.footer__svg{
+    width: 1.5rem;
+    height: 1rem;
+
+    transition: all 1s ease;
+}
+
+.footer__a:hover .footer__svg{
+    color: rgb(229, 10, 10);
+}
+
+.firma__footer:hover .andrea{
+    color: rgb(229, 10, 10);
+    cursor: pointer;
+    transition: all 1s ease;
+}
+
+/* RESPONSIVE - BRAKE POINTS */
+@media (max-width:1094px){
+    .columns__p{
+        font-size: .8rem;
+    }
+}
+@media (max-width:988px){
+    .columns{
+        flex-flow: column;
+    }
+    .column__imagen{
+        width: 60%;
+    }
+    .columna__descripcion{
+        width: 80%;
+        text-align: center;
+        padding: 3rem 0 0 0;
+    }
+    .columns__p{
+        font-size: 1rem;
+        padding: 0 2rem 2rem 2rem;
+    }
+}
+@media (max-width:680px){
+    .header__btn{
+        display: block;
+    }
+    .header__nav{
+        transition: all .5s ease;
+        background-color: white;
+        width: 100%;
+        height: 0;
+
+        position: fixed;
+        top: 5rem;
+        left: 0;
+
+        overflow: hidden;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .header__nav.move{
+        height: calc( 100% - 5rem);
+    }
+    .header__ul{
+        flex-flow: column;
+        font-size: 2rem;
+    }
+    .crear{
+        text-align: center;
+    }
+    .title:hover{
+    transform: scale(1.2);
+    transition: transform .5s ease-in;
+    cursor: pointer;
+}
+    .footer{
+        flex-flow: column;
+        gap: 2rem;
+        padding: 2rem;
+    }
+    .footer__svg{
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    .made{
+        margin-left: 3rem;
+    }
+}
+@media (max-width:490px){
+        .header{
+            padding: 2rem 1rem 2rem 1rem;
+    }
+}
+/* Establecemos @keyframe: secuencia de animación que 
+debe ser alcanzado por determinados puntos durante la animación */
+@keyframes aparecer{
+    0% { transform: translateY(100%);
+    opacity: 0;}
+    100% { transform: translateY(0%);
+    opacity: 1;}
+}
