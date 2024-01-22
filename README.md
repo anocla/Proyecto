@@ -43,19 +43,24 @@ Con Live Server, pude ver los cambios que hacía en mi código HTML y CSS en tie
 
 ## Vista previa del proyecto
 Si quieres hechas un vistazo al proyecto, te recomiendo:
-![work](https://github.com/anocla/Proyecto/assets/154549382/1ce1ce82-64da-4c7e-8353-3a4817ba3b61)
+
 ![about](https://github.com/anocla/Proyecto/assets/154549382/fdd93432-dc1d-438e-b653-34dfe124d25e)
 ![contact](https://github.com/anocla/Proyecto/assets/154549382/ce72b498-e70a-4c90-8e3c-21a45a17b8af)
+![work](https://github.com/anocla/Proyecto/assets/154549382/1ce1ce82-64da-4c7e-8353-3a4817ba3b61)
+
+## 💕 WORK
+### 🖌 Lols sempere : Rebranding web ilustración
+![lols sempere](https://github.com/anocla/Proyecto/assets/154549382/36e92456-a681-47ff-8782-09860c7a9d76)
+![Lightbox](https://github.com/anocla/Proyecto/assets/154549382/66b95b36-584d-444d-932c-48dcdbc63534)
+![Contacto](https://github.com/anocla/Proyecto/assets/154549382/ac6370ec-f8c2-406c-9726-f1f947fbe9b6)
 
 
 
 ## Autor ✒️
-**TU NOMBRE**
+**Andrea Ochoa Labrador**
 
-* [micorreo@midominio.com](micorreo@midominio.com)
-* [LinkedIn](https://www.linkedin.com/in/tu-url-de-linkedin/)
-* [Behance](https://www.behance.net/tu-url-de-behance)
-* [Dribble](https://www.dribble.com/tu-url-de-dribble)
+* fed@andreaochoalabrador.com
+* [LinkedIn](https://www.linkedin.com/in/andrea-o-61608024a/)
 * [Porfolio web](https://tu-dominio.com/)
 
 ## Instalación 
